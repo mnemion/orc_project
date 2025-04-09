@@ -10,6 +10,28 @@
       content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!-- 페이지 로드 전 다크 모드 초기화 (깜박임 방지) -->
+    <!-- process 객체 polyfill -->
+    <script>
+      // process 객체가 없는 경우에 대한 안전 조치
+      window.process = window.process || {};
+      window.process.env = window.process.env || {};
+      window.process.browser = true;
+    </script>
+
+    <!-- 페이지 로드 전 다크 모드 초기화 (깜박임 방지) -->
+    <script>
+      // 로컬 스토리지에서 테마 설정 확인
+      const savedTheme = localStorage.getItem('theme');
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      
+      // 사용자 설정 또는 시스템 기본값에 따라 다크 모드 적용
+      if (savedTheme === '"dark"' || (!savedTheme && systemPrefersDark)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/

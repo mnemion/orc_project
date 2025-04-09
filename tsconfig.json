@@ -18,7 +18,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "paths": {
+      "process/browser": ["./node_modules/process/browser.js"]
+    }
   },
   "include": [
     "src"

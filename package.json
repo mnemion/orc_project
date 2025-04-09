@@ -1,26 +1,49 @@
 {
-  "name": "orc_project",
+  "name": "orc-project",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/dom": "^10.4.0",
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.2.0",
+    "@craco/craco": "^7.1.0",
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@headlessui/react": "^1.7.17",
+    "@modelcontextprotocol/server-sequential-thinking": "^0.6.2",
+    "@mui/icons-material": "^6.4.8",
+    "@mui/material": "^6.4.9",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@types/date-fns": "^2.5.3",
     "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.126",
-    "@types/react": "^19.0.10",
-    "@types/react-dom": "^19.0.4",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "@types/node": "^16.18.60",
+    "@types/react": "^18.2.33",
+    "@types/react-dom": "^18.2.14",
+    "browserify-zlib": "^0.2.0",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.1",
+    "date-fns": "^3.6.0",
+    "docx": "^9.3.0",
+    "dotenv": "^16.4.7",
+    "file-saver": "^2.0.5",
+    "jspdf": "^3.0.1",
+    "jwt-decode": "^4.0.0",
+    "os-browserify": "^0.3.0",
+    "path-browserify": "^1.0.1",
+    "process": "^0.11.10",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-easy-crop": "^5.4.1",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^7.4.0",
     "react-scripts": "5.0.1",
+    "stream-browserify": "^3.0.0",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -40,5 +63,20 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/line-clamp": "^0.4.4",
+    "@types/file-saver": "^2.0.7",
+    "@types/lodash": "^4.17.16",
+    "autoprefixer": "^10.4.21",
+    "node-polyfill-webpack-plugin": "^2.0.1",
+    "postcss": "^8.5.3",
+    "postcss-loader": "^8.1.1",
+    "tailwindcss": "^4.0.17",
+    "tesseract.js": "^6.0.0"
+  },
+  "resolutions": {
+    "process": "0.11.10"
   }
 }
