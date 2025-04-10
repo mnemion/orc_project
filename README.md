@@ -5,6 +5,9 @@
 ## 주요 기능
 
 - OCR을 통한 문서 텍스트 추출
+  - Google Gemini AI를 활용한 고급 텍스트 추출
+  - Tesseract OCR을 활용한 기본 텍스트 추출
+  - 자동 이미지 전처리 및 품질 최적화
 - 다양한 문서 형식 지원 (이미지, PDF)
 - 문서 관리 및 검색
 - 사용자 인증 및 권한 관리
@@ -109,6 +112,9 @@ npm start
 
 - API 키
   - `GEMINI_API_KEY`: Google Gemini AI API 키
+    - [Google AI Studio](https://makersuite.google.com/app/apikey)에서 발급
+    - 무료 API 키: 분당 60회 요청 제한
+    - API 키가 없거나 할당량 초과 시 기본 OCR 시스템으로 자동 전환
   - `JWT_SECRET_KEY`: JWT 토큰 암호화 키
 
 - 이메일 설정
@@ -117,6 +123,25 @@ npm start
   - `EMAIL_USER`: 이메일 계정
   - `EMAIL_PASSWORD`: 이메일 앱 비밀번호
   - `EMAIL_FROM`: 발신자 이메일
+
+## OCR 처리 시스템
+
+이 프로젝트는 이중 OCR 처리 시스템을 구현하고 있습니다:
+
+1. 기본 처리 (Tesseract OCR)
+   - 로컬에서 실행되는 오픈소스 OCR 엔진
+   - 다양한 이미지 전처리 기법 적용
+   - 자동 품질 평가 및 최적화
+
+2. 고급 처리 (Google Gemini AI)
+   - 더 정확한 텍스트 추출
+   - 문맥 이해 및 구조화된 데이터 추출
+   - API 할당량 초과 시 자동으로 기본 처리로 전환
+
+### 이미지 전처리
+- 13가지 다양한 전처리 방법 적용
+- 자동 품질 평가 시스템
+- 최적의 결과를 제공하는 이미지 자동 선택
 
 ## 라이선스
 
